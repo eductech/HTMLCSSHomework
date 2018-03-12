@@ -1,0 +1,47 @@
+/* main styling rules  
+1.body
+2.wrapper
+3.header
+*/
+body {
+  background-color: #e9e8e4;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  margin: 2em;
+}
+header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.profile {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: 100px;
+  background-color: red;
+  border: 1px solid black;
+}
+.activity-feed {
+  height: 100px;
+  background-color: red;
+  border: 1px solid black;
+}
+.suggestions {
+  height: 100px;
+  background-color: red;
+  border: 1px solid black;
+}
+.chat {
+  height: 100px;
+  background-color: red;
+  border: 1px solid black;
+}
+.dialogues {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: 100px;
+  background-color: red;
+  border: 1px solid black;
+}

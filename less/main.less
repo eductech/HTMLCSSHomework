@@ -1,0 +1,60 @@
+// variables
+@background-color: #e9e8e4;
+
+// mixins
+.three-columns-wide() {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.mock() {
+    height: 100px;
+    background-color: red;
+    border: 1px solid black;
+}
+
+/* main styling rules  
+1.body
+2.wrapper
+3.header
+*/ 
+
+// 1.body
+body { 
+  background-color: @background-color;
+}
+
+// 2.wrapper
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+    margin: 2em;
+}
+
+// 3.header
+header {
+    .three-columns-wide;
+}
+
+.profile {
+    .three-columns-wide;
+    .mock;
+}
+
+.activity-feed {
+    .mock;
+}
+
+.suggestions {
+    .mock;
+}
+
+.chat {
+    .mock;
+}
+
+.dialogues {
+    .three-columns-wide;
+    .mock;
+}
