@@ -1,9 +1,20 @@
+.mock {
+  height: 100px;
+  background-color: red;
+  border: 1px solid black;
+}
 /* main styling rules  
+0.global
 1.body
 2.wrapper
+2.1.border radius
 3.header
+4.profile
 */
-body {
+* {
+  font-family: 'Roboto', sans-serif;
+}
+.body {
   background-color: #e9e8e4;
 }
 .wrapper {
@@ -12,9 +23,89 @@ body {
   grid-gap: 2em;
   margin: 2em;
 }
-header {
+.wrapper > div {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.header {
   grid-column-start: 1;
   grid-column-end: 4;
+}
+.header-top-bar {
+  background-color: #4d75a3;
+  display: flex;
+}
+.header-top-bar div {
+  height: 48px;
+  border-right: 1px solid #41638a;
+}
+.header-top-bar .header-top-bar__social_ui {
+  flex: 0 0 120px;
+}
+.header-top-bar .header-top-bar__social_ui p {
+  padding-left: 12px;
+  color: #ffffff;
+}
+.header-top-bar .header-top-bar__notifications {
+  flex: 0 0 48px;
+  background-image: url("img/notifications.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header-top-bar .header-top-bar__users {
+  flex: 0 0 48px;
+  background-image: url("img/users.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+}
+.header-top-bar .header-top-bar__messages {
+  flex: 0 0 48px;
+}
+.header-top-bar .header-top-bar__user {
+  flex: 1 1 auto;
+}
+.header-top-bar .header-top-bar__search {
+  flex: 0 0 48px;
+}
+.header-top-bar .header-top-bar__log_out {
+  flex: 0 0 48px;
+}
+.header-secondary-bar .header-secondary-bar__nav {
+  padding: unset;
+  margin: unset;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+}
+.header-secondary-bar .header-secondary-bar__nav li {
+  text-align: center;
+  margin: 0 12px;
+  display: block;
+  height: 48px;
+  box-sizing: border-box;
+}
+.header-secondary-bar .header-secondary-bar__nav li a {
+  text-decoration: none;
+  color: #97a4b1;
+  line-height: 48px;
+}
+.header-secondary-bar .header-secondary-bar__nav li:hover {
+  border-bottom: 3px solid #4d75a3;
+  cursor: pointer;
+}
+.header-secondary-bar .header-secondary-bar__nav li:hover a {
+  color: #4d75a3;
+}
+.header-secondary-bar .header-secondary-bar__nav .header-secondary-bar__nav_active {
+  border-bottom: 3px solid #4d75a3;
+  cursor: pointer;
+}
+.header-secondary-bar .header-secondary-bar__nav .header-secondary-bar__nav_active a {
+  color: #4d75a3;
 }
 .profile {
   grid-column-start: 1;

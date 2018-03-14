@@ -1,27 +1,33 @@
-// variables
-@background-color: #e9e8e4;
-
 // mixins
-.three-columns-wide() {
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-
-.mock() {
+.mock {
     height: 100px;
     background-color: red;
     border: 1px solid black;
 }
 
 /* main styling rules  
+0.global
 1.body
 2.wrapper
+2.1.border radius
 3.header
+4.profile
 */ 
 
+// 0.global
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 // 1.body
-body { 
-  background-color: @background-color;
+@background-color: #e9e8e4;
+
+@active-color: #4d75a3;
+
+@text-color: #97a4b1;
+
+.body { 
+    background-color: @background-color;
 }
 
 // 2.wrapper
@@ -32,11 +38,116 @@ body {
     margin: 2em;
 }
 
+// mixin
+.three-columns-wide() {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+// 2.1.border radius
+.wrapper > div {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
 // 3.header
-header {
+.header {
     .three-columns-wide;
 }
 
+.header-top-bar {
+    background-color: @active-color;
+    display: flex;
+
+    div {
+        height: 48px;
+        border-right: 1px solid #41638a;
+    }
+
+    .header-top-bar__social_ui {
+        flex: 0 0 120px;
+        p {
+            padding-left: 12px;
+            color: #ffffff;
+        }
+    }
+
+    .header-top-bar__notifications {
+        flex: 0 0 48px;
+        background-image: url("img/notifications.png");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .header-top-bar__users {
+        flex: 0 0 48px;
+        background-image: url("img/users.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.5;
+    }
+
+    .header-top-bar__messages {
+        flex: 0 0 48px;
+    }
+
+    .header-top-bar__user {
+        flex: 1 1 auto;
+    }
+
+    .header-top-bar__search {
+        flex: 0 0 48px;
+    }
+
+    .header-top-bar__log_out {
+        flex: 0 0 48px;
+    }
+}
+
+.header-secondary-bar {
+
+    .header-secondary-bar__nav {
+        padding: unset;
+        margin: unset;
+        list-style-type: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        
+        li {
+            text-align: center;
+            margin: 0 12px;
+            display: block;
+            height: 48px;
+            box-sizing: border-box;
+
+            a {
+                text-decoration: none;
+                color: @text-color;
+                line-height: 48px;
+            }
+        }
+
+        li:hover {
+            .header-secondary-bar__nav_active;
+        }
+
+        .header-secondary-bar__nav_active {
+            border-bottom: 3px solid @active-color;
+            cursor: pointer;
+
+            a {
+                color: @active-color;
+            }
+        }
+    }
+}
+
+
+// 4.profile
 .profile {
     .three-columns-wide;
     .mock;
