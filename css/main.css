@@ -10,6 +10,10 @@
 2.1.border radius
 3.header
 4.profile
+5.mobile device
+5.1.activity feed
+5.2.suggestions
+5.3.chat
 */
 * {
   font-family: 'Roboto', sans-serif;
@@ -107,12 +111,77 @@
 .header-secondary-bar .header-secondary-bar__nav .header-secondary-bar__nav_active a {
   color: #4d75a3;
 }
+h1 {
+  font-size: 1.3em;
+  margin: 4px 0;
+}
+p {
+  font-size: 0.8em;
+  margin: 4px 0;
+}
 .profile {
+  display: flex;
+  padding: 24px 12px;
   grid-column-start: 1;
   grid-column-end: 4;
-  height: 100px;
-  background-color: red;
-  border: 1px solid black;
+}
+.profile .profile__user {
+  display: flex;
+  align-items: center;
+  flex: 0 1 336px;
+  padding-left: 24px;
+  border-right: 1px solid #e9e8e4;
+}
+.profile .profile__user .profile__avatar {
+  background-image: url("http://via.placeholder.com/72x72");
+  height: 72px;
+  border-radius: 50%;
+  flex: 0 0 72px;
+}
+.profile .profile__user .profile__name-and-stat {
+  margin-left: 12px;
+}
+.profile .profile__status {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  justify-content: space-around;
+}
+.profile .profile__status > p {
+  text-align: center;
+  color: #97a4b1;
+}
+.profile .profile__status > p::first-line {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #4d75a3;
+}
+.profile .profile__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 192px;
+}
+.profile .profile__actions .button {
+  margin: 4px;
+}
+.profile .profile__actions .button:hover {
+  cursor: pointer;
+}
+.profile .profile__actions .button_huge {
+  font-size: 1em;
+  border-radius: 4px;
+  border: 2px solid #4d75a3;
+  padding: 8px 24px;
+  width: 160px;
+}
+.profile .profile__actions .button_dark {
+  background-color: #4d75a3;
+  color: #ffffff;
+}
+.profile .profile__actions .button_light {
+  background-color: #ffffff;
+  color: #4d75a3;
 }
 .activity-feed {
   height: 100px;
