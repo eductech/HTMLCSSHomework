@@ -1,9 +1,5 @@
-// mixins
-.mock {
-    height: 100px;
-    background-color: red;
-    border: 1px solid black;
-}
+@import "variables";
+@import "mixins";
 
 /* main styling rules  
 0.global
@@ -24,11 +20,6 @@
 }
 
 // 1.body
-@background-color: #e9e8e4;
-
-@active-color: #4d75a3;
-
-@text-color: #97a4b1;
 
 .body { 
     background-color: @background-color;
@@ -40,12 +31,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
     margin: 2em;
-}
-
-// mixin
-.three-columns-wide() {
-    grid-column-start: 1;
-    grid-column-end: 4;
 }
 
 // 2.1.border radius
@@ -133,11 +118,13 @@
                 color: @text-color;
                 line-height: 48px;
             }
+
+            &:hover {
+                .header-secondary-bar__nav_active;
+            }
         }
 
-        li:hover {
-            .header-secondary-bar__nav_active;
-        }
+
 
         .header-secondary-bar__nav_active {
             border-bottom: 3px solid @active-color;
