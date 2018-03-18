@@ -1,0 +1,106 @@
+.header {
+    >.header__top-bar {
+        background-color: @active-color;
+        display: flex;
+    
+        div {
+            height: 48px;
+            border-right: 1px solid #41638a;
+        }
+    
+        .social_ui {
+            flex: 0 0 120px;
+            p {
+                padding-left: 12px;
+                color: #ffffff;
+            }
+        }
+    
+        .notifications {
+            flex: 0 0 48px;
+            background-image: url("img/notifications.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        .users {
+            flex: 0 0 48px;
+            background-image: url("img/users.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.5;
+        }
+    
+        .messages {
+            flex: 0 0 48px;
+            background-image: url("img/users.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.5;
+        }
+    
+        .user {
+            flex: 1 1 auto;
+        }
+    
+        .search {
+            flex: 0 0 48px;
+            background-image: url("img/users.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.5;
+        }
+    
+        .log_out {
+            flex: 0 0 48px;
+            background-image: url("img/users.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.5;
+        }
+    }
+    
+    >.header__secondary-bar {
+    
+        >.nav {
+            padding: unset;
+            margin: unset;
+            list-style-type: none;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 48px;
+            
+            >li {
+                text-align: center;
+                margin: 0 12px;
+                display: block;
+                height: 48px;
+                box-sizing: border-box;
+    
+                >a {
+                    text-decoration: none;
+                    color: @text-color;
+                    line-height: 48px;
+                }
+    
+                &:hover {
+                    .nav_active;
+                }
+            }
+    
+            .nav_active {
+                border-bottom: 3px solid @active-color;
+                cursor: pointer;
+    
+                >a {
+                    color: @active-color;
+                }
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,48 @@
+.profile {
+    display: flex;
+    padding: 24px 12px;
+
+    >.profile__user {
+        display: flex;
+        align-items: center;
+        flex: 0 1 336px;
+        padding-left: 24px;
+        border-right: 1px solid @background-color;
+
+        >.avatar {
+            background-image: url("http://via.placeholder.com/72x72");
+            height: 72px;
+            border-radius: 50%;
+            flex: 0 0 72px;
+        }
+
+        >.name-and-stat {
+            margin-left: 12px;
+        }
+    }
+
+    >.profile__status {
+        display: flex;
+        align-items: center;
+        flex: 1 1 auto;
+        justify-content: space-around;
+
+        >p {
+            text-align: center;
+            color: @text-color;
+        }
+
+        >p::first-line {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: @active-color;
+        }
+    }
+
+    >.profile__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 1 192px;
+    }
+}

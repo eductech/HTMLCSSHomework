@@ -11,64 +11,66 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body class="body">
-    <div class="wrapper">
-        <div class="header">
-            <div class="header-top-bar">
-                <div class="header-top-bar__social_ui">
-                    <p><b>SOCIAL UI</b></p>
+        <div class="body__line">
+            <div class="header">
+                <div class="header__top-bar">
+                    <div class="social_ui">
+                        <p><b>SOCIAL UI</b></p>
+                    </div>
+                    <div class="notifications"></div>
+                    <div class="users"></div>
+                    <div class="messages"></div>
+                    <div class="user">
+                        <a href="">John Doe<i></i></a>
+                    </div>
+                    <div class="search"></div>
+                    <div class="log_out"></div>
                 </div>
-                <div class="header-top-bar__notifications"></div>
-                <div class="header-top-bar__users"></div>
-                <div class="header-top-bar__messages"></div>
-                <div class="header-top-bar__user">
-                    <a href="">John Doe<i></i></a>
+                <div class="header__secondary-bar">
+                    <ul class="nav">
+                        <li class="nav_active"><a href="#">Dialogues</a></li>
+                        <li><a href="#">Photos</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Music</a></li>
+                        <li><a href="#">Communities</a></li>
+                    </ul>
                 </div>
-                <div class="header-top-bar__search"></div>
-                <div class="header-top-bar__log_out"></div>
-            </div>
-            <div class="header-secondary-bar">
-                <ul class="header-secondary-bar__nav">
-                    <li class="header-secondary-bar__nav_active"><a href="#">Dialogues</a></li>
-                    <li><a href="#">Photos</a></li>
-                    <li><a href="#">Videos</a></li>
-                    <li><a href="#">Music</a></li>
-                    <li><a href="#">Communities</a></li>
-                </ul>
             </div>
         </div>  
         
-        <div class="profile">
-            <div class="profile__user">
-                <div class="profile__avatar"></div>
-                <div class="profile__name-and-stat">
-                    <h1>John Doe</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <div class="body__line">
+            <div class="profile">
+                <div class="profile__user">
+                    <div class="avatar"></div>
+                    <div class="name-and-stat">
+                        <h1>John Doe</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+                <div class="profile__status">
+                    <p>1121<br/>Follower</p>
+                    <p>5.356<br/>Following</p>
+                    <p>502<br/>Photos</p>
+                    <p>789<br/>Videos</p>
+                </div>
+                <div class="profile__actions">
+                    <button class="button button_huge button_dark" name="send-message">Send Message</button>
+                    <button class="button button_huge button_light" name="add-friend">Add Friend</button>
                 </div>
             </div>
-            <div class="profile__status">
-                <p>1121<br/>Follower</p>
-                <p>5.356<br/>Following</p>
-                <p>502<br/>Photos</p>
-                <p>789<br/>Videos</p>
-            </div>
-            <div class="profile__actions">
-                <button class="button button_huge button_dark" name="send-message">Send Message</button>
-                <button class="button button_huge button_light" name="add-friend">Add Friend</button>
-            </div>
         </div>
 
-        <div class="activity-feed">
+        <div class="body__cell">
                 
         </div>
-        <div class="suggestions">
+        <div class="body__cell">
             
         </div>
-        <div class="chat">
+        <div class="body__cell">
             
         </div>
-        <div class="dialogues">
+        <div class="body__line">
 
         </div>
-    </div>
 </body>
 </html>
