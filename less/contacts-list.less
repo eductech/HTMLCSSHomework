@@ -1,0 +1,91 @@
+.contacts-list {
+    margin: unset;
+    padding: unset;
+
+    .contact-list__item {
+        position: relative;
+        padding: 10px 0 15px 0;
+        font-size: 1em;
+        cursor: pointer;
+        border-bottom: 1px solid @secondary-background-color;
+
+        &:hover, 
+        &.active, 
+        &.unread {
+            background-color: @secondary-background-color;
+        }
+
+        >.people {
+            width: 88%;
+            margin: 0 auto;
+            position: relative;
+        
+            >span {
+                position: absolute;
+                left: 48px;
+                margin: -2px 0 0 -2px;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+
+                &.online {
+                    background: green;
+                }
+            }
+        
+            img {
+                width: 48px;
+                border-radius: 50%;
+                float: left;
+                margin-right: 10px;
+            }
+        
+            .meta {
+
+                .name {
+                    font-weight: 600;
+                }
+            
+                .preview {
+                    margin: 5px 0 0 0;
+                    padding: 0 0 1px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    >span {
+                        position: initial;
+                        border-radius: initial;
+                        background: none;
+                        border: none;
+                        padding: 0 2px 0 0;
+                        margin: 0 0 0 1px;
+                        opacity: 0.5;
+                    }
+
+                    >img {
+                        width: 16px;
+                        margin-right: 6px;
+                    }
+                }
+
+                >.info {
+                    float: right;
+                    text-align: right;
+
+                    >.date{
+                        opacity: 0.5;
+                    }
+
+                    >.amount {
+                        font-size: 0.8em;
+                        color: @primary-background-color;
+                        border-radius: 4px;
+                        background-color: @primary-color;
+                        padding: 2px 5px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,62 +1,18 @@
 .header {
     >.header__top-bar {
-        background-color: @active-color;
+        background-color: @primary-color;
         display: flex;
     
-        div {
-            height: 48px;
-            border-right: 1px solid #41638a;
+        >* {
+            border-right: 1px solid @header-top-bar-right-boder-color;
         }
     
-        .social_ui {
+        >.social-ui {
             flex: 0 0 120px;
-            p {
-                padding-left: 12px;
-                color: #ffffff;
-            }
-        }
-    
-        .notifications {
-            flex: 0 0 48px;
-            background-image: url("img/notifications.png");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    
-        .users {
-            flex: 0 0 48px;
-            background-image: url("img/users.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.5;
-        }
-    
-        .messages {
-            flex: 0 0 48px;
-            background-image: url("img/users.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.5;
-        }
-    
-        .user {
-            flex: 1 1 auto;
-        }
-    
-        .search {
-            flex: 0 0 48px;
-            background-image: url("img/users.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.5;
-        }
-    
-        .log_out {
-            flex: 0 0 48px;
-            background-image: url("img/users.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.5;
+            padding-left: 12px;
+            color: #ffffff;
+            line-height: 48px;
+            font-weight: bolder;
         }
     }
     
@@ -91,16 +47,13 @@
             }
     
             .nav_active {
-                border-bottom: 3px solid @active-color;
+                border-bottom: 3px solid @primary-color;
                 cursor: pointer;
     
                 >a {
-                    color: @active-color;
+                    color: @primary-color;
                 }
             }
         }
     }
 }
-
-
-

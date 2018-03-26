@@ -3,52 +3,47 @@
 @import "header";
 @import "profile";
 @import "button";
+@import "header-notification";
+@import "mobile-view";
+@import "icon-button";
+@import "drop-down";
+@import "avatar";
+@import "dialogues";
+@import "chats-list";
+@import "contact";
+@import "contacts-list";
+
+p {
+    font-size: 0.8em;
+    margin: 4px 0;
+}
+
+h1 {
+    font-size: 1.3em;
+    margin: 4px 0;
+}
 
 .body { 
-    background-color: @background-color;
+    background-color: @body-background-color;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
     margin: 2em;
     font-family: 'Roboto', sans-serif;
+    width: 1144px;
 
     >.body__line {
+        width: 1144px;
         .body_div_template();
         .three-columns-wide();
     }
     
     >.body__cell {
+        width: 360px;
         .body_div_template();
     }
-
-    h1 {
-        font-size: 1.3em;
-        margin: 4px 0;
-    }
-    
-    p {
-        font-size: 0.8em;
-        margin: 4px 0;
-    }
 }
 
-// 5.mobile device
-// 5.1.activity feed
-.activity-feed {
-    .mock;
-}
-
-// 5.2.suggestions
-.suggestions {
-    .mock;
-}
-
-// 5.3.chat
-.chat {
-    .mock;
-}
-
-.dialogues {
-    .three-columns-wide;
-    .mock;
+.body_shadow {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }

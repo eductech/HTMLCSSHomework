@@ -1,0 +1,62 @@
+.mobile-view {
+    height: 640px;
+    background-color: @primary-background-color;
+    display: flex;
+    flex-direction: column;
+
+    .mobile-view__header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 56px;
+        
+        >h1 {
+            flex: 1 1 auto;
+            font-weight: initial;
+            margin-left: 16px;
+        }
+    
+        >p {
+            color: @primary-background-color;
+            flex: 1 1 auto;
+        }
+    
+        &_dark{
+            background-color: @primary-color;
+        }
+    }
+    
+    .mobile-view__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        margin: 0 16px;
+    }
+    
+    .mobile-view__footer {
+        display: flex;
+        flex-direction: row;
+        flex: 0 0 48px;
+        background-color: @secondary-background-color;
+    }
+
+    .mobile-view_people-card {
+        display: flex;
+        margin: 24px 0;
+        align-items: center;
+
+        >.name-and-stat {
+            padding-left: 8px;
+            flex: 1 1 auto;
+
+            >h1 {
+                font-size: 1.0em;
+            }
+
+            >p {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+

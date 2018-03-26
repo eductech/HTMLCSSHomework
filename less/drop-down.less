@@ -1,0 +1,43 @@
+.drop-down {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+
+    &>* {
+        padding-right: 12px; 
+    }
+
+    >a {
+        text-decoration: none;
+        font-size: 0.8em;
+    }
+}
+
+.drop-down_right {
+    justify-content: flex-end;
+    padding-right: 16px;
+
+    >a {
+        color: @primary-background-color;
+        font-size: 0.8em;
+    }
+
+    >.icon-carret-down {
+        color: @primary-background-color;
+        font-size: 0.6em;
+    }
+}
+
+.drop-down_center {
+    justify-content: center;
+
+    >a {
+        text-transform: uppercase;
+        color: @text-color;
+    }
+
+    >.icon-carret-down {
+        color: @text-color;
+        font-size: 0.6em;
+    }
+}

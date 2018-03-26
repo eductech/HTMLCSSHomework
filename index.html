@@ -9,68 +9,329 @@
 
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- temporary font awsome styles -->
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
 </head>
 <body class="body">
-        <div class="body__line">
-            <div class="header">
-                <div class="header__top-bar">
-                    <div class="social_ui">
-                        <p><b>SOCIAL UI</b></p>
-                    </div>
-                    <div class="notifications"></div>
-                    <div class="users"></div>
-                    <div class="messages"></div>
-                    <div class="user">
-                        <a href="">John Doe<i></i></a>
-                    </div>
-                    <div class="search"></div>
-                    <div class="log_out"></div>
+    <div class="body__line body_shadow">
+        <div class="header">
+            <div class="header__top-bar">
+                <div class="social-ui">
+                    SOCIAL UI
                 </div>
-                <div class="header__secondary-bar">
-                    <ul class="nav">
-                        <li class="nav_active"><a href="#">Dialogues</a></li>
-                        <li><a href="#">Photos</a></li>
-                        <li><a href="#">Videos</a></li>
-                        <li><a href="#">Music</a></li>
-                        <li><a href="#">Communities</a></li>
-                    </ul>
+                <div class="icon-button icon-button_notifications icon-button_prime icon-button_active">
+                    <div class="header-notification">3</div>
+                </div>
+                <div class="icon-button icon-button_users icon-button_prime"></div>
+                <div class="icon-button icon-button_messages icon-button_prime"></div>
+                <div class="drop-down drop-down_right">
+                    <a href="#">John Doe</a>
+                    <img src="css/img/user.png"/>
+                    <i class="icon-carret-down">&#9660</i>
+                </div>
+                <div class="icon-button icon-button_search icon-button_prime"></div>
+                <div class="icon-button icon-button_log-out icon-button_prime"></div>
+            </div>
+            <div class="header__secondary-bar">
+                <ul class="nav">
+                    <li class="nav_active"><a href="#">Dialogues</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">Communities</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+    
+    <div class="body__line body_shadow">
+        <div class="profile">
+            <div class="profile__user">
+                <div class="avatar avatar_72"></div>
+                <div class="name-and-stat">
+                    <h1>John Doe</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </div>
             </div>
-        </div>  
-        
-        <div class="body__line">
-            <div class="profile">
-                <div class="profile__user">
-                    <div class="avatar"></div>
+            <div class="profile__status">
+                <p>1121<br/>Follower</p>
+                <p>5.356<br/>Following</p>
+                <p>502<br/>Photos</p>
+                <p>789<br/>Videos</p>
+            </div>
+            <div class="profile__actions">
+                <button class="button button_huge button_dark" name="send-message">Send Message</button>
+                <button class="button button_huge button_light" name="add-friend">Add Friend</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity Feed -->
+    <div class="body__cell body_shadow">
+        <div class="mobile-view">
+            <div class="mobile-view__header">
+                <h1>Activity Feed</h1>
+                <div class="icon-button icon-button_settings icon-button_prime"></div>
+            </div>
+            <div class="mobile-view__content"></div>
+            <div class="mobile-view__footer">
+                <div class="drop-down drop-down_center">
+                    <a href="#">Show earlier activity</a>
+                    <i class="icon-carret-down">&#9660</i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- People to Follow -->
+    <div class="body__cell body_shadow">
+        <div class="mobile-view">
+            <div class="mobile-view__header">
+                <h1>People to Follow</h1>
+            </div>
+            <div class="mobile-view__content">
+                <div class="mobile-view_people-card">
+                    <div class="avatar avatar_48"></div>
                     <div class="name-and-stat">
                         <h1>John Doe</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <button class="button button_small button_light">+ Add</button>
+                </div>
+                <div class="mobile-view_people-card">
+                    <div class="avatar avatar_48"></div>
+                    <div class="name-and-stat">
+                        <h1>John Doe</h1>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <button class="button button_small button_light">+ Add</button>
+                </div>
+                <div class="mobile-view_people-card">
+                    <div class="avatar avatar_48"></div>
+                    <div class="name-and-stat">
+                        <h1>John Doe</h1>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <button class="button button_small button_light">+ Add</button>
+                </div>
+                <div class="mobile-view_people-card">
+                    <div class="avatar avatar_48"></div>
+                    <div class="name-and-stat">
+                        <h1>John Doe</h1>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <button class="button button_small button_light">+ Add</button>
+                </div>
+                <div class="mobile-view_people-card">
+                    <div class="avatar avatar_48"></div>
+                    <div class="name-and-stat">
+                        <h1>John Doe</h1>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <button class="button button_small button_light">+ Add</button>
+                </div>
+                <div class="mobile-view_people-card">
+                    <div class="avatar avatar_48 avatar_online-icon"></div>
+                    <div class="name-and-stat">
+                        <h1>John Doe</h1>
+                        <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <button class="button button_small button_light">+ Add</button>
+                </div>
+            </div>
+            <div class="mobile-view__footer">
+                <div class="drop-down drop-down_center">
+                    <a href="#">Show 10 more</a>
+                    <i class="icon-carret-down">&#9660</i>
+                </div>
+            </div>
+        </div>            
+    </div>
+    <div class="body__cell body_shadow">
+        <div class="mobile-view">
+            <div class="mobile-view__header mobile-view__header_dark">
+                <div class="avatar avatar_36"></div>
+                <p>Alex Wayne</p>
+                <div class="icon-button icon-button_settings icon-button_sec"></div>
+                <div class="icon-button icon-button_settings icon-button_sec"></div>
+            </div>
+            <div class="mobile-view__content"></div>
+            <div class="mobile-view__footer">
+
+            </div>
+        </div>
+    </div>
+    <div class="body__line body_shadow">
+        <div class="dialogues"> 
+            <div class="dialogues__sidepanel">
+                <div class="chats-list">
+                    <div class="chats-list__header" id="profile">
+                        <h1>Dialogues (2)</h1>
+                        <i class="fa fa-exclamation-circle"></i>
+                        <i class="fa fa-volume-up"></i>
+                        <i class="fa fa-search"></i>
+                    </div>
+                    <div class="chats-list__content">
+                        <ul class="contacts-list">
+                            <li class="contact-list__item active">
+                                <div class="people">
+                                    <span class="online"></span>
+                                    <img src="http://via.placeholder.com/48x48" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Louis Litt</p>
+                                        <p class="preview">You just got LITT up, Mike.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-list__item">
+                                <div class="people">
+                                    <img src="http://via.placeholder.com/48x48" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Harvey Specter</p>
+                                        <p class="preview">Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-list__item">
+                                <div class="people">
+                                    <span class="online"></span>
+                                    <img src="http://via.placeholder.com/48x48" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Rachel Zane</p>
+                                        <p class="preview">I was thinking that we could have chicken tonight, sounds good?</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-list__item">
+                                <div class="people">
+                                    <span class="online"></span>
+                                    <img src="http://via.placeholder.com/48x48" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Donna Paulsen</p>
+                                        <p class="preview">Mike, I know everything! I'm Donna..</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-list__item unread">
+                                <div class="people">
+                                    <img src="http://via.placeholder.com/48x48" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Jessica Pearson</p>
+                                        <p class="preview">Have you finished the draft on the Hinsenburg deal?</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-list__item">
+                                <div class="people">
+                                    <span class="online"></span>
+                                    <img src="http://via.placeholder.com/48x48" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Harold Gunderson</p>
+                                        <p class="preview">Thanks Mike! :)</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-list__item">
+                                <div class="people">
+                                    <img src="http://via.placeholder.com/48x48" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Daniel Hardman</p>
+                                        <p class="preview">We'll meet again, Mike. Tell Jessica I said 'Hi'.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-list__item">
+                                <div class="people">
+                                    <span class="online"></span>
+                                    <img src="http://via.placeholder.com/48x48" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Katrina Bennett</p>
+                                        <p class="preview"><img src="http://via.placeholder.com/16x16" alt="" />I've sent you the files for the Garrett trial.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-list__item">
+                                <div class="people">
+                                    <span class="online"></span>
+                                    <img src="http://via.placeholder.com/48x48" alt="" />
+                                    <div class="meta">
+                                        <div class="info">
+                                            <p class="date">1:55 PM</p>
+                                            <span class="amount">3</span>
+                                        </div>
+                                        <p class="name">Charles Forstman</p>
+                                        <p class="preview">Mike, this isn't over.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact-list__item">
+                                <div class="people">
+                                    <img src="http://via.placeholder.com/48x48" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Jonathan Sidwell</p>
+                                        <p class="preview"><span>You:</span> That's bullshit. This deal is solid.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="profile__status">
-                    <p>1121<br/>Follower</p>
-                    <p>5.356<br/>Following</p>
-                    <p>502<br/>Photos</p>
-                    <p>789<br/>Videos</p>
+            </div>
+            <div class="content">
+                <div class="contact-profile">
+                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                    <p>Harvey Specter</p>
+                    <div class="social-media">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
                 </div>
-                <div class="profile__actions">
-                    <button class="button button_huge button_dark" name="send-message">Send Message</button>
-                    <button class="button button_huge button_light" name="add-friend">Add Friend</button>
+                <div class="messages">
+                    <ul>
+                        <li class="sent">
+                            <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                            <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
+                        </li>
+                        <li class="replies">
+                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                            <p>When you're backed against the wall, break the god damn thing down.</p>
+                        </li>
+                        <li class="replies">
+                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                            <p>Excuses don't win championships.</p>
+                        </li>
+                        <li class="sent">
+                            <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                            <p>Oh yeah, did Michael Jordan tell you that?</p>
+                        </li>
+                        <li class="replies">
+                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                            <p>No, I told him that.</p>
+                        </li>
+                        <li class="replies">
+                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                            <p>What are your choices when someone puts a gun to your head?</p>
+                        </li>
+                        <li class="sent">
+                            <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                            <p>What are you talking about? You do what they say or they shoot you.</p>
+                        </li>
+                        <li class="replies">
+                            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                            <p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="message-input">
+                    <div class="wrap">
+                    <input type="text" placeholder="Write your message..." />
+                    <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+                    <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="body__cell">
-                
-        </div>
-        <div class="body__cell">
-            
-        </div>
-        <div class="body__cell">
-            
-        </div>
-        <div class="body__line">
-
-        </div>
+    </div>
 </body>
 </html>
