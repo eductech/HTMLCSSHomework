@@ -288,142 +288,13 @@
   flex: 0 0 360px;
   height: 100%;
   overflow: hidden;
+  border-right: 1px solid #ebf4fa;
 }
-.dialogues .content {
+.dialogues .dialogues__content {
   flex: 1 1 auto;
-  width: 60%;
   height: 100%;
   overflow: hidden;
   position: relative;
-}
-.dialogues .content .contact-profile {
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  background: #f5f5f5;
-}
-.dialogues .content .contact-profile img {
-  width: 40px;
-  border-radius: 50%;
-  float: left;
-  margin: 9px 12px 0 9px;
-}
-.dialogues .content .contact-profile p {
-  float: left;
-}
-.dialogues .content .contact-profile .social-media {
-  float: right;
-}
-.dialogues .content .contact-profile .social-media i {
-  margin-left: 14px;
-  cursor: pointer;
-}
-.dialogues .content .contact-profile .social-media i:nth-last-child(1) {
-  margin-right: 20px;
-}
-.dialogues .content .contact-profile .social-media i:hover {
-  color: #435f7a;
-}
-.dialogues .content .messages {
-  height: auto;
-  min-height: calc(100% - 93px);
-  max-height: calc(100% - 93px);
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-.dialogues .content .messages::-webkit-scrollbar {
-  width: 8px;
-  background: transparent;
-}
-.dialogues .content .messages::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.dialogues .content .messages ul li {
-  display: inline-block;
-  clear: both;
-  float: left;
-  margin: 15px 15px 5px 15px;
-  width: calc(100% - 25px);
-  font-size: 0.9em;
-}
-.dialogues .content .messages ul li:nth-last-child(1) {
-  margin-bottom: 20px;
-}
-.dialogues .content .messages ul li.sent img {
-  margin: 6px 8px 0 0;
-}
-.dialogues .content .messages ul li.sent p {
-  background: #435f7a;
-  color: #f5f5f5;
-}
-.dialogues .content .messages ul li.replies img {
-  float: right;
-  margin: 6px 0 0 8px;
-}
-.dialogues .content .messages ul li.replies p {
-  background: #f5f5f5;
-  float: right;
-}
-.dialogues .content .messages ul li img {
-  width: 22px;
-  border-radius: 50%;
-  float: left;
-}
-.dialogues .content .messages ul li p {
-  display: inline-block;
-  padding: 10px 15px;
-  border-radius: 20px;
-  max-width: 205px;
-  line-height: 130%;
-}
-.dialogues .content .message-input {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  z-index: 99;
-}
-.dialogues .content .message-input .wrap {
-  position: relative;
-}
-.dialogues .content .message-input .wrap input {
-  font-family: "proxima-nova", "Source Sans Pro", sans-serif;
-  float: left;
-  border: none;
-  width: calc(100% - 90px);
-  padding: 11px 32px 10px 8px;
-  font-size: 0.8em;
-  color: #32465a;
-}
-.dialogues .content .message-input .wrap input:focus {
-  outline: none;
-}
-.dialogues .content .message-input .wrap .attachment {
-  position: absolute;
-  right: 60px;
-  z-index: 4;
-  margin-top: 10px;
-  font-size: 1.1em;
-  color: #435f7a;
-  opacity: .5;
-  cursor: pointer;
-}
-.dialogues .content .message-input .wrap .attachment:hover {
-  opacity: 1;
-}
-.dialogues .content .message-input .wrap button {
-  float: right;
-  border: none;
-  width: 50px;
-  padding: 12px 0;
-  cursor: pointer;
-  background: #32465a;
-  color: #f5f5f5;
-}
-.dialogues .content .message-input .wrap button:hover {
-  background: #435f7a;
-}
-.dialogues .content .message-input .wrap button:focus {
-  outline: none;
 }
 .chats-list {
   height: 100%;
@@ -433,6 +304,7 @@
   height: 56px;
   overflow: hidden;
   line-height: 56px;
+  border-bottom: 1px solid #ebf4fa;
 }
 .chats-list .chats-list__header > h1 {
   float: left;
@@ -456,7 +328,7 @@
   overflow-x: hidden;
 }
 .chats-list .chats-list__content::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
   background: transparent;
 }
 .chats-list .chats-list__content::-webkit-scrollbar-thumb {
@@ -536,6 +408,160 @@
   border-radius: 4px;
   background-color: #4d75a3;
   padding: 2px 5px;
+}
+.dialog {
+  height: 100%;
+}
+.dialog .dialog__header {
+  padding: 0 18px;
+  height: 56px;
+  overflow: hidden;
+  line-height: 56px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.97);
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ebf4fa;
+}
+.dialog .dialog__header img {
+  width: 48px;
+  border-radius: 50%;
+  float: left;
+  margin: 9px 12px 0 9px;
+}
+.dialog .dialog__header .profile-info {
+  float: left;
+  line-height: normal;
+  margin-top: 10px;
+}
+.dialog .dialog__header .profile-info p.name {
+  font-weight: 600;
+}
+.dialog .dialog__header .profile-info p.status > i {
+  font-size: 1.1em;
+  padding-right: 4px;
+}
+.dialog .dialog__header .social-media {
+  float: right;
+}
+.dialog .dialog__header .social-media i {
+  margin-left: 14px;
+  cursor: pointer;
+  opacity: 0.5;
+  font-size: 1em;
+  color: #435f7a;
+}
+.dialog .dialog__header .social-media i:nth-last-child(1) {
+  margin-right: 14px;
+}
+.dialog .dialog__header .social-media i:hover {
+  opacity: 1;
+}
+.dialog .dialog__messages {
+  height: auto;
+  max-height: calc(100% - 35px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.dialog .dialog__messages::-webkit-scrollbar {
+  width: 4px;
+  background: transparent;
+}
+.dialog .dialog__messages::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.dialog .dialog__messages .messages-list {
+  padding-left: 0px;
+}
+.dialog .dialog__messages .messages-list li {
+  margin: 15px 15px 5px 15px;
+  width: calc(100% - 25px);
+  font-size: 1em;
+  list-style: none;
+}
+.dialog .dialog__messages .messages-list li.sent {
+  text-align: left;
+}
+.dialog .dialog__messages .messages-list li.replies {
+  text-align: right;
+}
+.dialog .dialog__messages .messages-list .message {
+  display: inline-block;
+}
+.dialog .dialog__messages .messages-list li:nth-last-child(1) {
+  margin-bottom: 20px;
+}
+.dialog .dialog__messages .messages-list li.sent img {
+  margin: 6px 8px 0 0;
+}
+.dialog .dialog__messages .messages-list li.sent p {
+  background: #ebf4fa;
+}
+.dialog .dialog__messages .messages-list li.replies img {
+  margin: 6px 0 0 8px;
+}
+.dialog .dialog__messages .messages-list li.replies p {
+  background: #ebf4fa;
+}
+.dialog .dialog__messages .messages-list li img {
+  width: 48px;
+  border-radius: 50%;
+}
+.dialog .dialog__messages .messages-list li p {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  max-width: 205px;
+  line-height: 130%;
+}
+.dialog .dialog__message-input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 99;
+  border-top: 1px solid #ebf4fa;
+}
+.dialog .dialog__message-input .wrap {
+  position: relative;
+}
+.dialog .dialog__message-input .wrap input {
+  float: left;
+  border: none;
+  width: calc(100% - 90px);
+  padding: 11px 32px 10px 8px;
+  font-size: 0.8em;
+  color: #32465a;
+}
+.dialog .dialog__message-input .wrap input:focus {
+  outline: none;
+}
+.dialog .dialog__message-input .wrap .attachment {
+  position: absolute;
+  right: 60px;
+  z-index: 4;
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #435f7a;
+  opacity: .5;
+  cursor: pointer;
+}
+.dialog .dialog__message-input .wrap .attachment:hover {
+  opacity: 1;
+}
+.dialog .dialog__message-input .wrap button {
+  float: right;
+  border: none;
+  width: 50px;
+  padding: 12px 0;
+  cursor: pointer;
+  background: #32465a;
+  color: #f5f5f5;
+}
+.dialog .dialog__message-input .wrap button:hover {
+  background: #435f7a;
+}
+.dialog .dialog__message-input .wrap button:focus {
+  outline: none;
 }
 p {
   font-size: 0.8em;

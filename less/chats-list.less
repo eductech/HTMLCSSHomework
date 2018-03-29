@@ -6,6 +6,7 @@
         height: 56px;
         overflow: hidden;
         line-height: 56px;
+        border-bottom: 1px solid @secondary-background-color;
 
         >h1 {
             float: left;
@@ -28,17 +29,10 @@
     }
 
     .chats-list__content {
+        .scroll-bar();
+
         height: calc(100% - 56px);
         overflow-y: scroll;
         overflow-x: hidden;
-
-        &::-webkit-scrollbar {
-            width: 8px;
-            background: transparent;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background-color: rgba(0, 0, 0, 0.3);
-        }
     }
 }

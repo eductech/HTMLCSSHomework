@@ -1,0 +1,184 @@
+.dialog {
+
+    height: 100%;    
+
+    .dialog__header {
+        padding: 0 18px;
+        height: 56px;
+        overflow: hidden;
+        line-height: 56px;
+        position: absolute;
+        background-color: fade(@primary-background-color, 97%);
+        width: 100%;
+        box-sizing: border-box;
+        border-bottom: 1px solid @secondary-background-color;
+
+        img {
+            width: 48px;
+            border-radius: 50%;
+            float: left;
+            margin: 9px 12px 0 9px;
+        }
+        
+        .profile-info {
+            float: left;
+            line-height: normal;
+            margin-top: 10px;
+
+            p {
+                &.name {
+                    font-weight: 600;
+                }
+    
+                &.status {
+                    >i {
+                        font-size: 1.1em;
+                        padding-right: 4px;
+                    }
+                }
+            }
+        }
+
+        .social-media {
+            float: right;
+
+            i {
+                margin-left: 14px;
+                cursor: pointer;
+                opacity: 0.5;
+                font-size: 1em;
+                color: #435f7a;
+
+                &:nth-last-child(1) {
+                    margin-right: 14px;
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .dialog__messages {
+        .scroll-bar();
+
+        height: auto;
+        max-height: calc(100% - 35px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+    
+        .messages-list {
+            padding-left: 0px;
+
+            li {
+                margin: 15px 15px 5px 15px;
+                width: calc(100% - 25px);
+                font-size: 1em;
+                list-style: none;
+
+                &.sent {
+                    text-align: left;
+                }
+
+                &.replies {
+                    text-align: right;
+                }
+            }
+
+            .message {
+                display: inline-block;
+            }
+
+            li:nth-last-child(1) {
+                margin-bottom: 20px;
+            }
+
+            li.sent img {
+                margin: 6px 8px 0 0;
+            }
+
+            li.sent p {
+                background: @secondary-background-color;
+            }
+
+            li.replies img {
+                margin: 6px 0 0 8px;
+            }
+
+            li.replies p {
+                background: @secondary-background-color;
+            }
+
+            li img {
+                width: 48px;
+                border-radius: 50%;
+            }
+            
+            li p {
+                display: inline-block;
+                padding: 10px 15px;
+                border-radius: 8px;
+                max-width: 205px;
+                line-height: 130%;
+            }
+        }
+    }
+
+    .dialog__message-input {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 99;
+        border-top: 1px solid @secondary-background-color;
+
+        .wrap {
+            position: relative;
+        }
+
+        .wrap input {
+            float: left;
+            border: none;
+            width: calc(100% - 90px);
+            padding: 11px 32px 10px 8px;
+            font-size: 0.8em;
+            color: #32465a;
+        }
+    
+        .wrap input:focus {
+            outline: none;
+        }
+
+        .wrap .attachment {
+            position: absolute;
+            right: 60px;
+            z-index: 4;
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #435f7a;
+            opacity: .5;
+            cursor: pointer;
+        }
+    
+        .wrap .attachment:hover {
+            opacity: 1;
+        }
+
+        .wrap button {
+            float: right;
+            border: none;
+            width: 50px;
+            padding: 12px 0;
+            cursor: pointer;
+            background: #32465a;
+            color: #f5f5f5;
+        }
+    
+        .wrap button:hover {
+            background: #435f7a;
+        }
+        .wrap button:focus {
+            outline: none;
+        }
+    }
+}
