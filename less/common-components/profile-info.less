@@ -1,0 +1,47 @@
+.profile-info {
+    flex: 1 1 auto;
+    display: flex;
+
+    img {
+        border-radius: 50%;
+    }
+
+    div {
+        display: flex;
+        margin-left: 12px;
+        align-items: center;
+        
+        &.desktop {
+            flex-direction: column;
+            align-items: flex-start;
+
+            p {
+                color: @text-color-black;
+                font-weight: bolder;
+            }
+
+            i {
+                font-size: 0.8em;
+            }
+
+            i::after {
+                content: "Online";
+                font-family: 'Roboto', sans-serif;
+                margin-left: 4px;
+            }
+        }
+
+        &.mobile {
+            flex-direction: row;
+
+            p {
+                color: @text-color-light;
+            }
+    
+            i {
+                margin-left: 12px;
+                font-size: 0.6em;
+            }
+        }
+    }
+}

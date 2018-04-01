@@ -4,34 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social UI</title>
-
+    <!-- styles -->
     <link rel="stylesheet" href="css/main.css">
-
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <!-- temporary font awsome styles -->
-    <!-- <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'> -->
+    <!-- font awesome styles -->
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 </head>
 <body class="body">
+    <!-- Header -->
     <div class="body__line body_shadow">
         <div class="header">
             <div class="header__top-bar">
-                <div class="social-ui">
-                    SOCIAL UI
-                </div>
-                <div class="icon-button icon-button_notifications icon-button_prime icon-button_active">
-                    <div class="header-notification">3</div>
-                </div>
-                <div class="icon-button icon-button_users icon-button_prime"></div>
-                <div class="icon-button icon-button_messages icon-button_prime"></div>
+                <div class="social-ui">SOCIAL UI</div>
+                <div class="icon-button-holder"><i class="fa fa-bell fa_light fa_active" aria-hidden="true"></i><span class="header-notification">3</span></div>
+                <div class="icon-button-holder"><i class="fa fa-users fa_light" aria-hidden="true"></i></div>
+                <div class="icon-button-holder"><i class="fa fa-comments fa_light" aria-hidden="true"></i></div>
                 <div class="drop-down drop-down_right">
-                    <a href="#">John Doe</a>
-                    <img src="css/img/user.png"/>
-                    <i class="icon-carret-down">&#9660</i>
+                    <p>John Doe</p>
+                    <i class="fa fa-user fa_light" aria-hidden="true"></i>
+                    <i class="fa fa-caret-down fa_light" aria-hidden="true"></i>
                 </div>
-                <div class="icon-button icon-button_search icon-button_prime"></div>
-                <div class="icon-button icon-button_log-out icon-button_prime"></div>
+                <div class="icon-button-holder"><i class="fa fa-search fa_light" aria-hidden="true"></i></div>
+                <div class="icon-button-holder"><i class="fa fa-sign-out fa_light" aria-hidden="true"></i></div>
             </div>
             <div class="header__secondary-bar">
                 <ul class="nav">
@@ -45,12 +40,16 @@
         </div>
     </div>  
     
+    <!-- Profile -->
     <div class="body__line body_shadow">
         <div class="profile">
             <div class="profile__user">
                 <div class="avatar avatar_72"></div>
                 <div class="name-and-stat">
-                    <h1>John Doe</h1>
+                    <span>
+                        <h1>John Doe</h1>
+                        <i class="fa fa-check-circle-o fa_dark" aria-hidden="true"></i>
+                    </span>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </div>
             </div>
@@ -72,105 +71,209 @@
         <div class="mobile-view">
             <div class="mobile-view__header">
                 <h1>Activity Feed</h1>
-                <div class="icon-button icon-button_settings icon-button_prime"></div>
+                <div class="icon-buttons-holder">
+                    <i class="fa fa-cog fa_dark fa_mg12" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="mobile-view__content"></div>
             <div class="mobile-view__footer">
                 <div class="drop-down drop-down_center">
-                    <a href="#">Show earlier activity</a>
-                    <i class="icon-carret-down">&#9660</i>
+                    <p>Show earlier activity</p>
+                    <i class="fa fa-caret-down fa_dark" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- People to Follow -->
+    <!-- Suggestions -->
     <div class="body__cell body_shadow">
         <div class="mobile-view">
             <div class="mobile-view__header">
                 <h1>People to Follow</h1>
             </div>
             <div class="mobile-view__content">
-                <div class="mobile-view_people-card">
-                    <div class="avatar avatar_48"></div>
-                    <div class="name-and-stat">
-                        <h1>John Doe</h1>
-                        <p>Lorem ipsum dolor sit amet</p>
+                <div class="suggestions">
+                    <div class="suggestions__people-card">
+                        <div class="avatar avatar_48"></div>
+                        <div class="name-and-stat">
+                            <h1>John Doe</h1>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <button class="button button_small button_light">+ Add</button>
                     </div>
-                    <button class="button button_small button_light">+ Add</button>
-                </div>
-                <div class="mobile-view_people-card">
-                    <div class="avatar avatar_48"></div>
-                    <div class="name-and-stat">
-                        <h1>John Doe</h1>
-                        <p>Lorem ipsum dolor sit amet</p>
+                    <div class="suggestions__people-card">
+                        <div class="avatar avatar_48"></div>
+                        <div class="name-and-stat">
+                            <h1>John Doe</h1>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <button class="button button_small button_light">+ Add</button>
                     </div>
-                    <button class="button button_small button_light">+ Add</button>
-                </div>
-                <div class="mobile-view_people-card">
-                    <div class="avatar avatar_48"></div>
-                    <div class="name-and-stat">
-                        <h1>John Doe</h1>
-                        <p>Lorem ipsum dolor sit amet</p>
+                    <div class="suggestions__people-card">
+                        <div class="avatar avatar_48 avatar_online-icon"></div>
+                        <div class="name-and-stat">
+                            <h1>John Doe</h1>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <button class="button button_small button_light">+ Add</button>
                     </div>
-                    <button class="button button_small button_light">+ Add</button>
-                </div>
-                <div class="mobile-view_people-card">
-                    <div class="avatar avatar_48"></div>
-                    <div class="name-and-stat">
-                        <h1>John Doe</h1>
-                        <p>Lorem ipsum dolor sit amet</p>
+                    <div class="suggestions__people-card">
+                        <div class="avatar avatar_48"></div>
+                        <div class="name-and-stat">
+                            <h1>John Doe</h1>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <button class="button button_small button_light">+ Add</button>
                     </div>
-                    <button class="button button_small button_light">+ Add</button>
-                </div>
-                <div class="mobile-view_people-card">
-                    <div class="avatar avatar_48"></div>
-                    <div class="name-and-stat">
-                        <h1>John Doe</h1>
-                        <p>Lorem ipsum dolor sit amet</p>
+                    <div class="suggestions__people-card">
+                        <div class="avatar avatar_48 avatar_online-icon"></div>
+                        <div class="name-and-stat">
+                            <h1>John Doe</h1>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <button class="button button_small button_light">+ Add</button>
                     </div>
-                    <button class="button button_small button_light">+ Add</button>
-                </div>
-                <div class="mobile-view_people-card">
-                    <div class="avatar avatar_48 avatar_online-icon"></div>
-                    <div class="name-and-stat">
-                        <h1>John Doe</h1>
-                        <p>Lorem ipsum dolor sit amet</p>
+                    <div class="suggestions__people-card">
+                        <div class="avatar avatar_48 avatar_online-icon"></div>
+                        <div class="name-and-stat">
+                            <h1>John Doe</h1>
+                            <p>Lorem ipsum dolor sit amet</p>
+                        </div>
+                        <button class="button button_small button_light">+ Add</button>
                     </div>
-                    <button class="button button_small button_light">+ Add</button>
                 </div>
             </div>
             <div class="mobile-view__footer">
                 <div class="drop-down drop-down_center">
-                    <a href="#">Show 10 more</a>
-                    <i class="icon-carret-down">&#9660</i>
+                    <p>Show 10 more</p>
+                    <i class="fa fa-caret-down fa_dark" aria-hidden="true"></i>
                 </div>
             </div>
         </div>            
     </div>
+
+    <!-- Chat -->
     <div class="body__cell body_shadow">
         <div class="mobile-view">
             <div class="mobile-view__header mobile-view__header_dark">
-                <div class="avatar avatar_36"></div>
-                <p>Alex Wayne</p>
-                <div class="icon-button icon-button_settings icon-button_sec"></div>
-                <div class="icon-button icon-button_settings icon-button_sec"></div>
+                <div class="profile-info">
+                    <img src="http://via.placeholder.com/36x36" alt="" />
+                    <div class="mobile">
+                        <p>Alex Wayne</p>
+                        <i class="fa fa-circle fa_light fa_active" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="icon-buttons-holder">
+                    <i class="fa fa-window-maximize fa_light fa_mg12" aria-hidden="true"></i>
+                    <i class="fa fa-times fa_light fa_mg12" aria-hidden="true"></i>
+                </div>
             </div>
-            <div class="mobile-view__content"></div>
+            <div class="mobile-view__content">
+                <ul class="messages-list messages-list_mobile-view">
+                    <li class="sent">
+                        <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                        <div class="message">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            <p class="date">3:10 PM</p>
+                        </div>
+                    </li>
+                    <li class="replies">
+                        <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                        <div class="message">
+                            <p>
+                                <img src="http://via.placeholder.com/256x445" alt="">
+                                <img src="http://via.placeholder.com/525x614" alt="">
+                            </p>
+                            <p class="date">3:10 PM</p>
+                        </div>
+                    </li>
+                    <li class="replies">
+                        <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                        <div class="message">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            <p class="date">3:10 PM</p>
+                        </div>
+                    </li>
+                    <li class="sent">
+                        <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                        <div class="message">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...<span class="message-list-notification">!</span></p>
+                            <p class="date">3:10 PM</p>
+                        </div>
+                    </li>
+                    <li class="replies">
+                        <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                        <div class="message">
+                            <p>Lorem ipsum dolor sit amet, consetetur</p>
+                            <p class="date">3:10 PM</p>
+                        </div>
+                    </li>
+                    <li class="replies">
+                        <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                        <div class="message">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            <p class="date">3:10 PM</p>
+                        </div>
+                    </li>
+                    <li class="sent">
+                        <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                        <div class="message">
+                            <p>
+                                <img src="http://via.placeholder.com/1212x240" alt="">
+                                <img src="http://via.placeholder.com/525x614" alt="">
+                            </p>
+                            <p class="date">3:10 PM</p>
+                        </div>
+                    </li>
+                    <li class="sent">
+                        <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                        <div class="message">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                            <p class="date">3:10 PM</p>
+                        </div>
+                    </li>
+                    <li class="replies">
+                        <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                        <div class="message">
+                            <p>Lorem ipsum dolor sit amet, consetetur</p>
+                            <p class="date">3:10 PM</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <div class="mobile-view__footer">
-
-            </div>
+                <div class="input input_mobile">
+                    <div class="input__form">
+                        <input type="text" placeholder="" />
+                        <div class="actions-bottom">
+                            <i class="fa fa-smile-o fa_dark actions-bottom__smiles" aria-hidden="true"></i>
+                            <div class="drop-down drop-down_right drop-down_input actions-bottom__attach">
+                                <p>Attach</p>
+                                <i class="fa fa-caret-down fa_dark" aria-hidden="true"></i>
+                                <i class="fa fa-paperclip fa_dark" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input__submit-holder">
+                            <button class="button button_huge button_dark" name="send-message">Send</button>
+                    </div>
+                </div>
+    </div>
         </div>
     </div>
+
+    <!-- Dialogues -->
     <div class="body__line body_shadow">
         <div class="dialogues"> 
             <div class="dialogues__sidepanel">
                 <div class="chats-list">
                     <div class="chats-list__header">
                         <h1>Dialogues (2)</h1>
-                        <i class="fa fa-exclamation-circle"></i>
-                        <i class="fa fa-volume-up"></i>
-                        <i class="fa fa-search"></i>
+                        <div class="icon-buttons-holder">
+                            <i class="fa fa-exclamation-circle fa_dark fa_mg12" aria-hidden="true"></i>
+                            <i class="fa fa-volume-up fa_dark fa_mg12" aria-hidden="true"></i>
+                            <i class="fa fa-search fa_dark fa_mg12" aria-hidden="true"></i>
+                        </div>
                     </div>
                     <div class="chats-list__content">
                         <ul class="contacts-list">
@@ -281,58 +384,109 @@
             <div class="dialogues__content">
                 <div class="dialog">
                     <div class="dialog__header">
-                        <img src="http://via.placeholder.com/48x48" alt="" />
                         <div class="profile-info">
-                                <p class="name">Harvey Specter</p>
-                                <p class="status"><i class="fa fa-mobile" aria-hidden="true"></i>Online</p>
+                            <img src="http://via.placeholder.com/36x36" alt="" />
+                            <div class="desktop">
+                                <p>Alex Wayne</p>
+                                <i class="fa fa-mobile fa_dark fa_active" aria-hidden="true"></i>
+                            </div>
                         </div>
-                        <div class="social-media">
-                            <i class="fa fa-user-plus" aria-hidden="true"></i>
-                            <i class="fa fa-cog" aria-hidden="true"></i>
-                            <i class="fa fa-times" aria-hidden="true"></i>
+                        <div class="icon-buttons-holder">
+                            <i class="fa fa-user-plus fa_dark fa_mg14" aria-hidden="true"></i>
+                            <i class="fa fa-cog fa_dark fa_mg14" aria-hidden="true"></i>
+                            <i class="fa fa-times fa_dark fa_mg14" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="dialog__messages">
                         <ul class="messages-list">
                             <li class="sent">
-                                <img src="http://via.placeholder.com/48x48" alt="" />
-                                <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
+                                <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                                <div class="message">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                    <p class="date">3:10 PM</p>
+                                </div>
                             </li>
                             <li class="replies">
-                                <img src="http://via.placeholder.com/48x48" alt="" />
-                                <p>When you're backed against the wall, break the god damn thing down. When you're backed against the wall, break the god damn thing down.</p>
+                                <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                                <div class="message">
+                                    <p>
+                                        <img src="http://via.placeholder.com/256x445" alt="">
+                                        <img src="http://via.placeholder.com/525x614" alt="">
+                                        <img src="http://via.placeholder.com/258x548" alt="">
+                                    </p>
+                                    <p class="date">3:10 PM</p>
+                                </div>
                             </li>
                             <li class="replies">
-                                <img src="http://via.placeholder.com/48x48" alt="" />
-                                <p>Excuses don't win championships. Excuses don't win championships. Excuses don't win championships. Excuses don't win championships.</p>
+                                <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                                <div class="message">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                    <p class="date">3:10 PM</p>
+                                </div>
                             </li>
                             <li class="sent">
-                                <img src="http://via.placeholder.com/48x48" alt="" />
-                                <p>Oh yeah, did Michael Jordan tell you that?</p>
+                                <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                                <div class="message">
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr...<span class="message-list-notification">!</span></p>
+                                    <p class="date">3:10 PM</p>
+                                </div>
                             </li>
                             <li class="replies">
-                                <img src="http://via.placeholder.com/48x48" alt="" />
-                                <p>No, I told him that.</p>
+                                <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                                <div class="message">
+                                    <p>Lorem ipsum dolor sit amet, consetetur</p>
+                                    <p class="date">3:10 PM</p>
+                                </div>
                             </li>
                             <li class="replies">
-                                <img src="http://via.placeholder.com/48x48" alt="" />
-                                <p>What are your choices when someone puts a gun to your head?</p>
+                                <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                                <div class="message">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                    <p class="date">3:10 PM</p>
+                                </div>
                             </li>
                             <li class="sent">
-                                <img src="http://via.placeholder.com/48x48" alt="" />
-                                <p>What are you talking about? You do what they say or they shoot you.</p>
+                                <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                                <div class="message">
+                                    <p>
+                                        <img src="http://via.placeholder.com/1212x240" alt="">
+                                        <img src="http://via.placeholder.com/525x614" alt="">
+                                    </p>
+                                    <p class="date">3:10 PM</p>
+                                </div>
+                            </li>
+                            <li class="sent">
+                                <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                                <div class="message">
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+                                    <p class="date">3:10 PM</p>
+                                </div>
                             </li>
                             <li class="replies">
-                                <img src="http://via.placeholder.com/48x48" alt="" />
-                                <p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                                <img class="avatar" src="http://via.placeholder.com/48x48" alt="" />
+                                <div class="message">
+                                    <p>Lorem ipsum dolor sit amet, consetetur</p>
+                                    <p class="date">3:10 PM</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
                     <div class="dialog__message-input">
-                        <div class="wrap">
-                            <input type="text" placeholder="Write your message..." />
-                            <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
-                            <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                        <div class="input">
+                            <div class="input__form">
+                                <input type="text" placeholder="" />
+                                <div class="actions-bottom">
+                                    <i class="fa fa-smile-o fa_dark actions-bottom__smiles" aria-hidden="true"></i>
+                                    <div class="drop-down drop-down_right drop-down_input actions-bottom__attach">
+                                        <p>Attach</p>
+                                        <i class="fa fa-caret-down fa_dark" aria-hidden="true"></i>
+                                        <i class="fa fa-paperclip fa_dark" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input__submit-holder">
+                                    <button class="button button_huge button_dark" name="send-message">Send</button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,31 @@
+.dialog {
+    height: 100%;    
+
+    .dialog__header {
+        padding: 0 18px;
+        height: 56px;
+        overflow: hidden;
+        position: absolute;
+        background-color: fade(@primary-background-color, 95%);
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        z-index: 9;
+    }
+
+    .dialog__messages {
+        .scroll-bar();
+
+        max-height: 85%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .dialog__message-input {
+        height: calc(15% - 24px);
+        width: calc(100% - 24px);
+        padding: 12px;
+        background-color: @secondary-background-color;
+    }
+}

@@ -1,0 +1,28 @@
+.notifications() {
+    position: absolute;
+    background-color: red;
+    color: white;
+    height: 16px;
+    width: 16px;
+    font-size: 0.8em;
+    text-align: center;
+    font-weight: bolder;
+    line-height: 16px;
+}
+
+.header-notification {
+    .notifications();
+
+    top: 6px;
+    left: 23px;
+    border-radius: 4px;
+    border: 2px solid @primary-color;
+}
+
+.message-list-notification {
+    .notifications();
+
+    top: -8px;
+    left: -8px;
+    border-radius: 50%;
+}

@@ -6,31 +6,17 @@
         height: 56px;
         overflow: hidden;
         line-height: 56px;
-        border-bottom: 1px solid @secondary-background-color;
 
         >h1 {
             float: left;
             font-size: 1em;
-        }
-
-        >i {
-            float: right;
-            margin-top: 21px;
-            margin-left: 12px;
-            font-size: 1em;
-            cursor: pointer;
-            color: #435f7a;
-            opacity: 0.5;
-
-            &:hover {
-                opacity: 1.0;
-            }
+            margin: 0;
         }
     }
 
     .chats-list__content {
         .scroll-bar();
-
+        
         height: calc(100% - 56px);
         overflow-y: scroll;
         overflow-x: hidden;

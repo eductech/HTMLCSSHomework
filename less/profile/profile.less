@@ -2,37 +2,42 @@
     display: flex;
     padding: 24px 12px;
 
-    >.profile__user {
+    .profile__user {
         display: flex;
         align-items: center;
         flex: 0 1 336px;
         padding-left: 24px;
         border-right: 1px solid @secondary-background-color;
 
-        >.name-and-stat {
+        .name-and-stat {
             margin-left: 12px;
+
+            h1 {
+                display: inline;
+                margin-right: 12px;
+            }
         }
     }
 
-    >.profile__status {
+    .profile__status {
         display: flex;
         align-items: center;
         flex: 1 1 auto;
         justify-content: space-around;
 
-        >p {
+        p {
             text-align: center;
             color: @text-color;
         }
 
-        >p::first-line {
+        p::first-line {
             font-size: 1.5em;
             font-weight: bold;
             color: @primary-color;
         }
     }
 
-    >.profile__actions {
+    .profile__actions {
         display: flex;
         flex-direction: column;
         align-items: center;

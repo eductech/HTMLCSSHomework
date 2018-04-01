@@ -1,0 +1,39 @@
+.icon-button-holder {
+    line-height: 48px;
+    width: 48px;
+    text-align: center;
+    position: relative;
+}
+
+.icon-buttons-holder {
+    float: right;
+}
+
+.fa {
+    opacity: 0.5;
+    cursor: pointer;
+
+    &.fa_active {
+        opacity: 1;
+    }
+
+    &:hover {
+        .fa_active;
+    }
+}
+
+.fa_light {
+    color: @text-color-light;
+}
+
+.fa_dark {
+    color: @text-color;
+}
+
+.fa_mg14 {
+    margin-left: 14px;
+}
+
+.fa_mg12 {
+    margin-left: 12px;
+}

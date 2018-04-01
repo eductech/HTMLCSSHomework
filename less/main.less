@@ -1,23 +1,35 @@
+// variables
 @import "variables";
 @import "mixins";
-@import "header";
-@import "profile";
+
 // common components
 @import "/common-components/button";
-@import "header-notification";
-@import "mobile-view";
-@import "icon-button";
-@import "drop-down";
-@import "avatar";
-@import "dialogues";
-@import "chats-list";
-@import "contact";
-@import "contacts-list";
-@import "dialog";
+@import "/common-components/icon-button";
+@import "/common-components/drop-down";
+@import "/common-components/avatar";
+@import "/common-components/profile-info";
+@import "/common-components/messages-list";
+@import "/common-components/input";
+@import "/common-components/notification";
+
+// other components
+// 1.header
+@import "/header/header";
+// 2.profile
+@import "/profile/profile";
+// 3.mobile-view
+@import "/mobile-view/mobile-view";
+@import "/mobile-view/suggestions";
+// 4.dialogues
+@import "/dialogues/dialogues";
+@import "/dialogues/chats-list";
+@import "/dialogues/contacts-list";
+@import "/dialogues/dialog";
 
 p {
     font-size: 0.8em;
     margin: 4px 0;
+    color: @text-color;
 }
 
 h1 {
@@ -30,19 +42,19 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
-    margin: 2em;
+    margin: 2em auto;
     font-family: 'Roboto', sans-serif;
     width: 1144px;
 
-    >.body__line {
+    .body__line {
         width: 1144px;
-        .body_div_template();
+        .card-template();
         .three-columns-wide();
     }
     
-    >.body__cell {
+    .body__cell {
         width: 360px;
-        .body_div_template();
+        .card-template();
     }
 }
 

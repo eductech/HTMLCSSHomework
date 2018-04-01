@@ -2,42 +2,47 @@
     flex: 1 1 auto;
     display: flex;
     align-items: center;
+    cursor: pointer;
 
-    &>* {
+    >* {
         padding-right: 12px; 
     }
 
-    >a {
-        text-decoration: none;
+    >p {
         font-size: 0.8em;
+    }
+
+    >i {
+        font-size: 1.2em;
+        opacity: 1;
+    }
+
+    >i.fa-caret-down {
+        font-size: 0.9em;
+        opacity: 1;
     }
 }
 
 .drop-down_right {
     justify-content: flex-end;
-    padding-right: 16px;
 
-    >a {
+    >p {
         color: @primary-background-color;
         font-size: 0.8em;
-    }
-
-    >.icon-carret-down {
-        color: @primary-background-color;
-        font-size: 0.6em;
     }
 }
 
 .drop-down_center {
     justify-content: center;
 
-    >a {
+    >p {
         text-transform: uppercase;
         color: @text-color;
     }
+}
 
-    >.icon-carret-down {
+.drop-down_input {
+    >p {
         color: @text-color;
-        font-size: 0.6em;
     }
 }
