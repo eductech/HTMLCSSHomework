@@ -295,6 +295,7 @@
 .input_mobile {
   width: 100%;
   border-top: 1px solid #ebf4fa;
+  background-color: #ffffff;
 }
 .input_mobile .input__form {
   position: relative;
@@ -303,7 +304,8 @@
 .input_mobile .input__form > input {
   border: none;
   border-radius: unset;
-  padding: 8px 40px 8px 40px;
+  margin: 8px 40px 8px 40px;
+  z-index: 1;
 }
 .input_mobile .input__form > .actions-bottom {
   position: absolute;
@@ -448,6 +450,57 @@
   flex-direction: column;
   align-items: center;
   flex: 0 1 192px;
+}
+.activity-card {
+  display: flex;
+  justify-content: flex-start;
+  margin: 8px 0;
+}
+.activity-card .activity-card__border {
+  margin: 0 16px 0 8px;
+}
+.activity-card .activity-card__border > i {
+  font-size: 22px;
+}
+.activity-card .activity-card__border > .border {
+  height: calc(100% - 32px);
+  border: 1px solid #667a90;
+  width: 0;
+  margin: auto;
+  margin-top: 8px;
+  opacity: 0.5;
+}
+.activity-card .activity-card__content .title P a {
+  text-decoration: none;
+  color: #4d75a3;
+  font-weight: bolder;
+}
+.activity-card .activity-card__content .content {
+  min-height: 22px;
+}
+.activity-card .activity-card__content .content > img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  float: left;
+  margin-right: 4px;
+}
+.activity-card .activity-card__content .content > p.title {
+  font-weight: bolder;
+}
+.activity-card .activity-card .activity-card__border {
+  display: none;
+}
+.activity-card .activity-card .activity-card__content .title {
+  display: none;
+}
+.activity-feed {
+  height: 100%;
+}
+.activity-feed .activity-feed__card {
+  width: 100%;
 }
 .mobile-view {
   height: 640px;
@@ -687,12 +740,6 @@ h1 {
   background-color: #ffffff;
   grid-column-start: 1;
   grid-column-end: 4;
-  /* 
-    "grid-column: 1 / 3;"
-    is compiled as "grid-column: 0.33333"
-    so another working approach is
-    "grid-column: 1 e("/") 4;" 
-    */
 }
 .body .body__cell {
   width: 360px;

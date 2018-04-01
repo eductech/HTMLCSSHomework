@@ -1,0 +1,64 @@
+.activity-card {
+    display: flex;
+    justify-content: flex-start;
+    margin: 8px 0;
+
+    .activity-card__border {
+        margin: 0 16px 0 8px;
+
+        >i {
+            font-size: 22px;
+        }
+
+        >.border {
+            height: calc(100% - 32px);
+            border: 1px solid @text-color;
+            width: 0;
+            margin: auto;
+            margin-top: 8px;
+            opacity: 0.5;
+        }
+    }
+
+    .activity-card__content {
+        .title {
+            P {
+                a {
+                    text-decoration: none;
+                    color: @primary-color;
+                    font-weight: bolder;
+                }
+            }
+        }
+
+        .content {
+            min-height: 22px;
+
+            >img {
+                width: 56px;
+                height: 56px;
+                object-fit: cover;
+                display: block;
+                border-radius: 8px;
+                float: left;
+                margin-right: 4px;
+            }
+
+            >p.title {
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .activity-card {
+        .activity-card__border {
+            display: none;
+        }
+
+        .activity-card__content {
+            .title {
+                display: none;
+            }
+        }
+    }
+}

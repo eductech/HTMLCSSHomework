@@ -43,6 +43,7 @@
 .input_mobile {
     width: 100%;
     border-top: 1px solid @secondary-background-color;
+    background-color: @primary-background-color;
 
     .input__form {
         position: relative;
@@ -51,7 +52,8 @@
         >input {
             border: none;
             border-radius: unset;
-            padding: 8px 40px 8px 40px;
+            margin: 8px 40px 8px 40px;
+            z-index: 1;
         }
 
         >.actions-bottom {
