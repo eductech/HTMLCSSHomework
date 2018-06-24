@@ -46,17 +46,34 @@ h1 {
     grid-gap: 2em;
     margin: 2em auto;
     font-family: 'Roboto', sans-serif;
-    width: 1144px;
+    min-width: @sm;
+    max-width: @lg;
+
+    @media screen and (max-width: @lg) {
+        margin: 16px;
+    }
+
+    @media screen and (max-width: @md) {
+        margin: 2em;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .body__line {
-        width: 1144px;
         .card-template();
         .three-columns-wide();
+        @media screen and (max-width: @md) {
+            .two-columns-wide();
+        }
     }
     
     .body__cell {
-        width: 360px;
         .card-template();
+
+        &_mobile-hidden {
+            @media screen and (max-width: @md) {
+                display: none;
+            }
+        }
     }
 }
 

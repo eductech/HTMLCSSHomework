@@ -2,6 +2,10 @@
     display: flex;
     padding: 24px 12px;
 
+    @media screen and (max-width: @md) {
+        justify-content: space-evenly;
+    }
+
     .profile__user {
         display: flex;
         align-items: center;
@@ -34,6 +38,10 @@
             font-size: 1.5em;
             font-weight: bold;
             color: @primary-color;
+        }
+
+        @media screen and (max-width: @md) {
+            display: none;
         }
     }
 
