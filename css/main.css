@@ -70,13 +70,13 @@
   flex: 1 1 auto;
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 .drop-down > * {
   padding-right: 12px;
 }
 .drop-down > p {
   font-size: 0.8em;
+  cursor: pointer;
 }
 .drop-down > i {
   font-size: 1.2em;
@@ -348,6 +348,7 @@
   left: 23px;
   border-radius: 4px;
   border: 2px solid #4d75a3;
+  cursor: pointer;
 }
 .message-list-notification {
   position: absolute;
@@ -376,6 +377,7 @@
   color: #ffffff;
   line-height: 48px;
   font-weight: bolder;
+  cursor: pointer;
 }
 .header > .header__secondary-bar > .nav {
   padding: unset;
