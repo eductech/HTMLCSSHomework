@@ -4,9 +4,11 @@
     .suggestions__people-card {
         display: flex;
         align-items: center;
+
         padding: 12px 0;
         height: calc(100% / 6);
         box-sizing: border-box;
+        position: relative;
 
         >.name-and-stat {
             padding-left: 8px;
@@ -20,5 +22,17 @@
                 font-size: 0.8em;
             }
         }
+
+        &::after {
+            content: " ";
+            position: absolute;
+            left: 9%;
+            bottom: 18%;
+            width: 8px;
+            height: 8px;
+            background-color: green;
+            border-radius: 8px;
+            border: 2px solid @primary-background-color;
+        }        
     }
 }

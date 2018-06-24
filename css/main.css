@@ -109,30 +109,16 @@
   position: relative;
 }
 .avatar_72 {
-  background-image: url("http://via.placeholder.com/72x72");
   height: 72px;
   width: 72px;
 }
 .avatar_48 {
-  background-image: url("http://via.placeholder.com/48x48");
   height: 48px;
   width: 48px;
 }
 .avatar_36 {
-  background-image: url("http://via.placeholder.com/36x36");
   height: 36px;
   width: 36px;
-}
-.avatar_online-icon::after {
-  content: " ";
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
-  width: 8px;
-  height: 8px;
-  background-color: green;
-  border-radius: 8px;
-  border: 2px solid #ffffff;
 }
 .profile-info {
   flex: 1 1 auto;
@@ -140,6 +126,8 @@
 }
 .profile-info img {
   border-radius: 50%;
+  height: 48px;
+  width: 48px;
 }
 .profile-info div {
   display: flex;
@@ -554,6 +542,7 @@
   padding: 12px 0;
   height: calc(100% / 6);
   box-sizing: border-box;
+  position: relative;
 }
 .suggestions .suggestions__people-card > .name-and-stat {
   padding-left: 8px;
@@ -564,6 +553,17 @@
 }
 .suggestions .suggestions__people-card > .name-and-stat > p {
   font-size: 0.8em;
+}
+.suggestions .suggestions__people-card::after {
+  content: " ";
+  position: absolute;
+  left: 9%;
+  bottom: 18%;
+  width: 8px;
+  height: 8px;
+  background-color: green;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
 }
 .dialogues {
   height: 660px;
@@ -668,6 +668,7 @@
 }
 .contacts-list .contact-list__item > .people .meta .preview > img {
   width: 16px;
+  height: 16px;
   margin-right: 6px;
 }
 .contacts-list .contact-list__item > .people .meta > .info {
